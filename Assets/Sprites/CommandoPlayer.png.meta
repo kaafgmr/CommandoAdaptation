@@ -1,0 +1,708 @@
+fileFormatVersion: 2
+guid: 34c9323c74f56c640a9b47f15738d093
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1229386335203022745
+    second: CommandoPlayer_0
+  - first:
+      213: 8987654501087973749
+    second: CommandoPlayer_1
+  - first:
+      213: -2997221121812968331
+    second: CommandoPlayer_2
+  - first:
+      213: 5992426922215905938
+    second: CommandoPlayer_3
+  - first:
+      213: 731911055079845863
+    second: CommandoPlayer_4
+  - first:
+      213: -131223089757170264
+    second: CommandoPlayer_5
+  - first:
+      213: 5061963520980811223
+    second: CommandoPlayer_6
+  - first:
+      213: -368541853392598565
+    second: CommandoPlayer_7
+  - first:
+      213: -9072328848539429645
+    second: CommandoPlayer_8
+  - first:
+      213: 3188100766463055572
+    second: CommandoPlayer_9
+  - first:
+      213: 7382052604771946787
+    second: CommandoPlayer_10
+  - first:
+      213: -6763519258220019995
+    second: CommandoPlayer_11
+  - first:
+      213: -7582811962663708318
+    second: CommandoPlayer_12
+  - first:
+      213: -3845180813962086000
+    second: CommandoPlayer_13
+  - first:
+      213: -3441512992203826449
+    second: CommandoPlayer_14
+  - first:
+      213: 3382493528442339046
+    second: CommandoPlayer_15
+  - first:
+      213: 8415027742313634649
+    second: CommandoPlayer_16
+  - first:
+      213: 4349570156966956178
+    second: CommandoPlayer_17
+  - first:
+      213: 1447285928485508031
+    second: CommandoPlayer_18
+  - first:
+      213: 9126531044701274834
+    second: CommandoPlayer_19
+  - first:
+      213: -3593808849575680328
+    second: CommandoPlayer_20
+  - first:
+      213: -5254376795734660393
+    second: CommandoPlayer_21
+  - first:
+      213: -4330000499265058469
+    second: CommandoPlayer_22
+  - first:
+      213: -1669133545725195486
+    second: CommandoPlayer_23
+  - first:
+      213: -7180237095674600917
+    second: CommandoPlayer_24
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: CommandoPlayer_0
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 133
+        width: 15
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 768218644a750fee0800000000000000
+      internalID: -1229386335203022745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CommandoPlayer_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 133
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5711a4d66209abc70800000000000000
+      internalID: 8987654501087973749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CommandoPlayer_2
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 99
+        width: 13
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57c4a09054bb766d0800000000000000
+      internalID: -2997221121812968331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CommandoPlayer_3
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 99
+        width: 13
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29a9a295980692350800000000000000
+      internalID: 5992426922215905938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CommandoPlayer_4
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 75
+        width: 15
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ef273d0a35482a00800000000000000
+      internalID: 731911055079845863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CommandoPlayer_5
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 75
+        width: 15
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a5d1bc8b4dcd2ef0800000000000000
+      internalID: -131223089757170264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CommandoPlayer_6
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 52
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ddfb0eb005bf3640800000000000000
+      internalID: 5061963520980811223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CommandoPlayer_7
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 52
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd98baf032da2eaf0800000000000000
+      internalID: -368541853392598565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CommandoPlayer_8
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 27
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f45741cafc981280800000000000000
+      internalID: -9072328848539429645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CommandoPlayer_9
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 27
+        width: 14
+        height: 22
+      alignment: 9
+      pivot: {x: 0.425, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d65e2d71c86e3c20800000000000000
+      internalID: 3188100766463055572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CommandoPlayer_10
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 4
+        width: 11
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 321dda47bb1527660800000000000000
+      internalID: 7382052604771946787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CommandoPlayer_11
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 3
+        width: 11
+        height: 22
+      alignment: 9
+      pivot: {x: 0.5087481, y: 0.52187085}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ee384eb1172322a0800000000000000
+      internalID: -6763519258220019995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CommandoPlayer_12
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 105
+        width: 16
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 269d8d602b074c690800000000000000
+      internalID: -7582811962663708318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CommandoPlayer_13
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 107
+        width: 15
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09974ae1c6c23aac0800000000000000
+      internalID: -3845180813962086000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CommandoPlayer_14
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 105
+        width: 16
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fea9cc1ea2a4d30d0800000000000000
+      internalID: -3441512992203826449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CommandoPlayer_15
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 150
+        width: 5
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6eefcd161f701fe20800000000000000
+      internalID: 3382493528442339046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CommandoPlayer_16
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 150
+        width: 5
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95b59ab952f28c470800000000000000
+      internalID: 8415027742313634649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CommandoPlayer_17
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 135
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29cc7a34307cc5c30800000000000000
+      internalID: 4349570156966956178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CommandoPlayer_18
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 132
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb3dcc742eac51410800000000000000
+      internalID: 1447285928485508031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CommandoPlayer_19
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 117
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d28ef671a3f7ae70800000000000000
+      internalID: 9126531044701274834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CommandoPlayer_20
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 108
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b6e26264e9302ec0800000000000000
+      internalID: -3593808849575680328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CommandoPlayer_21
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 99
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7da2e26a424b417b0800000000000000
+      internalID: -5254376795734660393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CommandoPlayer_22
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 86
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b59ca0cbc7fb8e3c0800000000000000
+      internalID: -4330000499265058469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CommandoPlayer_23
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 89
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22b8c5432eb06d8e0800000000000000
+      internalID: -1669133545725195486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CommandoPlayer_24
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 104
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b22ab3d676caa5c90800000000000000
+      internalID: -7180237095674600917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

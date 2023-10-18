@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags: []
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - Camera
+  - Water
+  - UI
+  - Player
+  - Enemy
+  - PlayerBullet
+  - EnemyBullet
+  - Objects
+  - cameraBoundaries
+  - PuddleOfDeath
+  - Granade
+  - PlayerBoundaries
+  - GranadeBox
+  - FinalPoint
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Map
+    uniqueID: 3245706203
+    locked: 0
+  - name: Characters
+    uniqueID: 2859922687
+    locked: 0
+  - name: Objects
+    uniqueID: 2207618069
+    locked: 0
+  - name: Bridge
+    uniqueID: 3264386177
+    locked: 0
+  - name: UI
+    uniqueID: 233746217
+    locked: 0

@@ -1,0 +1,252 @@
+fileFormatVersion: 2
+guid: 34c169fabe90e5248a059a995199c058
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6688094317195820418
+    second: FinalAnimation_0
+  - first:
+      213: -1810015364407156570
+    second: FinalAnimation_1
+  - first:
+      213: -64558780942893012
+    second: FinalAnimation_2
+  - first:
+      213: -7663886074449361917
+    second: FinalAnimation_3
+  - first:
+      213: 1408565050660379914
+    second: FinalAnimation_4
+  - first:
+      213: -5400898540302771569
+    second: FinalAnimation_5
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: FinalAnimation_0
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 22
+        width: 79
+        height: 110
+      alignment: 9
+      pivot: {x: 0.58756113, y: 0.52730715}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e720c3f47ad1f23a0800000000000000
+      internalID: -6688094317195820418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalAnimation_1
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 22
+        width: 82
+        height: 110
+      alignment: 9
+      pivot: {x: 0.5676484, y: 0.52726036}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a0238ead9881e6e0800000000000000
+      internalID: -1810015364407156570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalAnimation_2
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 22
+        width: 81
+        height: 110
+      alignment: 9
+      pivot: {x: 0.5749754, y: 0.52717763}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2044ca7124aa1ff0800000000000000
+      internalID: -64558780942893012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalAnimation_3
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 22
+        width: 81
+        height: 110
+      alignment: 9
+      pivot: {x: 0.56789935, y: 0.52715075}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3040265683864a590800000000000000
+      internalID: -7663886074449361917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalAnimation_4
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 22
+        width: 81
+        height: 110
+      alignment: 9
+      pivot: {x: 0.5677057, y: 0.5271478}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0d54af537a3c8310800000000000000
+      internalID: 1408565050660379914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalAnimation_5
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 22
+        width: 80
+        height: 110
+      alignment: 9
+      pivot: {x: 0.56754446, y: 0.52741414}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8ad35d84672c05b0800000000000000
+      internalID: -5400898540302771569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
