@@ -365,10 +365,10 @@ MonoBehaviour:
   pooledLists:
   - Name: PlayerBullet
     objectToPool: {fileID: 2337865803786595267, guid: e892cc82f587946418f1495edfe71875, type: 3}
-    amount: 2
+    amount: 10
   - Name: BulletExplosion
     objectToPool: {fileID: 3222633586687781458, guid: 7b4237bfd05034648ac813b2a596a4f9, type: 3}
-    amount: 30
+    amount: 10
   - Name: Granade
     objectToPool: {fileID: 5145352843813883960, guid: afebd5e891fd23842b0b05140ec08e5c, type: 3}
     amount: 5
@@ -4650,6 +4650,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d953ae6314f80c43880ff9f8b8ec1e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  drownAnimClip: {fileID: 7400000, guid: 03e61f2bd0a4cfd428647cee64b99a66, type: 2}
 --- !u!1001 &1117335814
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4724,8 +4725,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1135280545}
-  - component: {fileID: 1135280546}
   - component: {fileID: 1135280547}
+  - component: {fileID: 1135280546}
   m_Layer: 12
   m_Name: PuddleSmall
   m_TagString: Untagged
@@ -4785,6 +4786,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d953ae6314f80c43880ff9f8b8ec1e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  drownAnimClip: {fileID: 7400000, guid: 03e61f2bd0a4cfd428647cee64b99a66, type: 2}
 --- !u!4 &1140137123 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2320009929957003127, guid: b5344229f6c0d7d478126076150909ae, type: 3}
@@ -6855,6 +6857,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d953ae6314f80c43880ff9f8b8ec1e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  drownAnimClip: {fileID: 7400000, guid: 03e61f2bd0a4cfd428647cee64b99a66, type: 2}
 --- !u!1001 &1762466253
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7135,6 +7138,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d953ae6314f80c43880ff9f8b8ec1e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  drownAnimClip: {fileID: 7400000, guid: 03e61f2bd0a4cfd428647cee64b99a66, type: 2}
 --- !u!1001 &1810493666
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8495,6 +8499,8 @@ MonoBehaviour:
   velocity: 5
   shootingRotationSpeed: 5
   ShootingPivot: {fileID: 1759767469978564960}
+  throwGranadeAnim: {fileID: 7400000, guid: 3e428c867ba3f884eb954264e6ef2622, type: 2}
+  movementStopped: 0
 --- !u!114 &262741661572543710
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8553,9 +8559,9 @@ MonoBehaviour:
   OnDie:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 703662221}
-        m_TargetAssemblyTypeName: MenuControl, Assembly-CSharp
-        m_MethodName: GameOver
+      - m_Target: {fileID: 116900971}
+        m_TargetAssemblyTypeName: PoolingManager, Assembly-CSharp
+        m_MethodName: DisableAllObjects
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8565,9 +8571,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 116900971}
-        m_TargetAssemblyTypeName: PoolingManager, Assembly-CSharp
-        m_MethodName: DisableAllObjects
+      - m_Target: {fileID: 703662221}
+        m_TargetAssemblyTypeName: MenuControl, Assembly-CSharp
+        m_MethodName: GameOver
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8621,7 +8627,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  granadeAmount: 5
+  granadeAmount: 999
 --- !u!1 &669194349091263064
 GameObject:
   m_ObjectHideFlags: 0
@@ -9335,6 +9341,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _anim: {fileID: 0}
+  OnAnimationFinished:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &6764113181128203699
 MonoBehaviour:
   m_ObjectHideFlags: 0

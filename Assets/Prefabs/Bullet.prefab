@@ -112,8 +112,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0aeea03bb999f794697991f3c571ba83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Velocity: 10
-  Damage: 1
+  velocity: 10
+  damage: 1
+  getHurtAnimClip: {fileID: 7400000, guid: 13f6f3cb41de0f1498a7039111281a9b, type: 2}
 --- !u!114 &-2872697457599177197
 MonoBehaviour:
   m_ObjectHideFlags: 0

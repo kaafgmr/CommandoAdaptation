@@ -113,8 +113,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0aeea03bb999f794697991f3c571ba83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Velocity: 10
-  Damage: 1
+  velocity: 10
+  damage: 1
+  getHurtAnimClip: {fileID: 7400000, guid: 13f6f3cb41de0f1498a7039111281a9b, type: 2}
 --- !u!114 &8980101850813081871
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -176,12 +177,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 993ac0cdee9635a48a3f39e980bad669, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ShootingPosition: {fileID: 436183994427963954}
-  timeToShoot: 0
+  shootingPoint: {fileID: 0}
+  fireRate: 0
   UpdateGranadeValue:
     m_PersistentCalls:
       m_Calls: []
   SetGranadeValue:
     m_PersistentCalls:
       m_Calls: []
-  GranadeAmount: 0
+  granadeAmount: 0

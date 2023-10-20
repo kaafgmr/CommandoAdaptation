@@ -4,6 +4,7 @@ public class BulletBehaviour : MonoBehaviour
 {
     [SerializeField] private float velocity = 10f;
     [SerializeField] private float damage = 1f;
+    [SerializeField] private AnimationClip getHurtAnimClip;
 
     private MovementBehaviour MB;
     private DestroyDisableObjects Dest;
@@ -28,10 +29,16 @@ public class BulletBehaviour : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.TryGetComponent<HealthBehaviour>(out HealthBehaviour Object) && collision.TryGetComponent<AnimationController>(out AnimationController AC))
+        if(collision.TryGetComponent(out HealthBehaviour HB) && collision.TryGetComponent(out AnimationController AC))
         {
-            Object.GetHurt(damage);
+            HB.GetHurt(damage);
             AC.GetHurtAnimation(1);
+            if(collision.TryGetComponent(out PlayerController PC))
+            {
+                PC.movementStopped = true;
+                AC.ChangeAnimSpeed(1);
+                AC.CheckAnimFinished(getHurtAnimClip);
+            }
         }
         DestroyBullet();
     }

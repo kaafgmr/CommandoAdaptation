@@ -353,7 +353,6 @@
 "Assets/Scripts/GranadeExplosion.cs"
 "Assets/Scripts/HealthBehaviour.cs"
 "Assets/Scripts/ImageOnHover.cs"
-"Assets/Scripts/LifeManager.cs"
 "Assets/Scripts/MenuControl.cs"
 "Assets/Scripts/MovementBehaviour.cs"
 "Assets/Scripts/ObjectCounter.cs"

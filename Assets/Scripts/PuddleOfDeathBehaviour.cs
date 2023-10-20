@@ -1,15 +1,21 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PuddleOfDeathBehaviour : MonoBehaviour
 {
+    [SerializeField] private AnimationClip drownAnimClip;
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.TryGetComponent<AnimationController>(out AnimationController animation) && collision.TryGetComponent<HealthBehaviour>(out HealthBehaviour health))
+        if (collision.TryGetComponent(out AnimationController AC) && collision.TryGetComponent(out HealthBehaviour HB))
         {
-            animation.DrowningAnimation(1);
-            health.GetHurt(1);
+            HB.GetHurt(1);
+            AC.DrowningAnimation(1);
+
+            if (collision.TryGetComponent(out PlayerController PC))
+            {
+                PC.movementStopped = true;
+                AC.ChangeAnimSpeed(1);
+                AC.CheckAnimFinished(drownAnimClip);
+            }
         }
     }
 }

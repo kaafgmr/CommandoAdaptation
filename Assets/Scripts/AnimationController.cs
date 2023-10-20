@@ -1,8 +1,11 @@
+using System.Collections;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class AnimationController : MonoBehaviour
 {
     public Animator _anim;
+    public UnityEvent<string> OnAnimationFinished;
 
     private void Awake()
     {
@@ -31,20 +34,6 @@ public class AnimationController : MonoBehaviour
         _anim.speed = speed;
     }
 
-    private AnimationClip getAnim(AnimatorClipInfo[] animatiorClipInfoList, string name)
-    {
-        AnimationClip clip = null;
-        foreach (AnimatorClipInfo anim in animatiorClipInfoList)
-        {
-            if (anim.clip.name != name) continue;
-
-            clip = anim.clip;
-            break;
-        }
-
-        return clip;
-    }
-
     public void ThrowGranadeAnim(int value)
     {
         if (_anim.GetInteger("Drown") == 0)
@@ -62,6 +51,7 @@ public class AnimationController : MonoBehaviour
         if (_anim.GetInteger("Drown") == 0)
         {
             _anim.SetInteger("GetHurt", value);
+            ChangeAnimSpeed(value);
         }
         else{
             _anim.SetInteger("GetHurt", 0);
@@ -71,5 +61,20 @@ public class AnimationController : MonoBehaviour
     public void DrowningAnimation(int value)
     {
         _anim.SetInteger("Drown", value);
+        ChangeAnimSpeed(value);
+    }
+
+    public void CheckAnimFinished(AnimationClip animClip)
+    {
+        StartCoroutine(AnimFinishedCheker(animClip));
+    }
+
+    IEnumerator AnimFinishedCheker(AnimationClip animClip)
+    {
+        float animSpeed = _anim.GetCurrentAnimatorStateInfo(0).speed;
+        float animDuration = animClip.length * (1 / animSpeed);
+        yield return new WaitForSeconds(animDuration);
+
+        OnAnimationFinished.Invoke(animClip.name);
     }
 }

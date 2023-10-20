@@ -254,7 +254,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shootingPoint: {fileID: 224487846711909079}
-  fireRate: 2
+  fireRate: 1
   UpdateGranadeValue:
     m_PersistentCalls:
       m_Calls: []
@@ -274,6 +274,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35eb836d8cf634d48929d928e0b2a558, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _anim: {fileID: 0}
+  OnAnimationFinished:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &224487846343576339
 MonoBehaviour:
   m_ObjectHideFlags: 0

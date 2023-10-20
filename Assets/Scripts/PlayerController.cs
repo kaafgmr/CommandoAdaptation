@@ -1,4 +1,3 @@
-using System.Collections;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -6,6 +5,8 @@ public class PlayerController : MonoBehaviour
     public float velocity = 5f;
     public float shootingRotationSpeed = 5f;
     public Transform ShootingPivot;
+    [SerializeField] private AnimationClip throwGranadeAnim;
+    public bool movementStopped = false;
     
     private bool throwingGranade = false;
     private Vector2 direction;
@@ -14,19 +15,30 @@ public class PlayerController : MonoBehaviour
     private ShootingBehaviour SB;
     private AnimationController AC;
     private Vector2 lastDir;
+    private Respawn respawn;
 
     private void Awake()
     {
+        respawn = GetComponent<Respawn>();
         SR = GetComponent<SpriteRenderer>();
         SB = GetComponent<ShootingBehaviour>();
         AC = GetComponent<AnimationController>();
         MB = GetComponent<MovementBehaviour>();
         MB.Init(velocity);
+        lastDir = Vector2.up;
+    }
+
+    private void Start()
+    {
+        AC.OnAnimationFinished.AddListener(OnAnimFinishedUpdate);
     }
 
     private void FixedUpdate()
     {
-        MB.MoveRB(direction);
+        if(!movementStopped)
+        {
+            MB.MoveRB(direction);
+        }
     }
 
     void Update()
@@ -35,7 +47,10 @@ public class PlayerController : MonoBehaviour
 
         UpdateShooting();
 
-        UpdateMovement(direction);
+        if(!movementStopped)
+        {
+            UpdateMovement(direction);
+        }
     }
 
     private void UpdateShooting()
@@ -50,6 +65,8 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.K) && !throwingGranade && SB.granadeAmount > 0)
         {
             throwingGranade = true;
+            movementStopped = true;
+            AC.ChangeAnimSpeed(1f);
             AC.ThrowGranadeAnim(1);
             ThrowGranadeUpdate();
         }
@@ -61,25 +78,19 @@ public class PlayerController : MonoBehaviour
         {
             AC.ChangeWalkingAnimation(lastDir);
             lastDir = direction;
+            AC.ChangeAnimSpeed(1f);
         }
         else
         {
             AC.ChangeAnimSpeed(0f);
         }
 
-        UpdateFlipPlayerImg(lastDir);
+        UpdatePlayerImg(lastDir);
     }
 
-    private void UpdateFlipPlayerImg(Vector2 dir)
+    private void UpdatePlayerImg(Vector2 dir)
     {
-        if (dir.x < 0)
-        {
-            SR.flipX = true;
-        }
-        else
-        {
-            SR.flipX = false;
-        }
+         SR.flipX = dir.x < 0;
     }
 
     private void ChangeShootingDir()
@@ -97,19 +108,26 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void ThrowGranadeUpdate()
+    private void OnAnimFinishedUpdate(string animName)
     {
-        StartCoroutine(CheckAnimFinished());
+        movementStopped = false;
+        AC.ChangeAnimSpeed(0f);
+
+        if (animName == "ThrowGranade")
+        {
+            OnThrowGranadeAnimFinished();
+        }
+        else if (animName == "DrownAnim")
+        {
+            respawn.RespawnObject();
+            AC.ChangeAnimSpeed(1f);
+        }
     }
 
-    IEnumerator CheckAnimFinished()
+    private void ThrowGranadeUpdate()
     {
-        while (AC._anim.GetCurrentAnimatorStateInfo(0).normalizedTime < 1f)
-        {
-            yield return null;
-        }
-
-        OnThrowGranadeAnimFinished();
+        AC.ChangeAnimSpeed(1f);
+        AC.CheckAnimFinished(throwGranadeAnim);
     }
 
     private void OnThrowGranadeAnimFinished()
