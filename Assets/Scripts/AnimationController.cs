@@ -4,7 +4,7 @@ using UnityEngine.Events;
 
 public class AnimationController : MonoBehaviour
 {
-    public Animator _anim;
+    [HideInInspector] public Animator _anim;
     public UnityEvent<string> OnAnimationFinished;
 
     private void Awake()

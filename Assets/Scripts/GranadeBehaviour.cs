@@ -8,11 +8,9 @@ public class GranadeBehaviour : MonoBehaviour
     private float _time;
     private Vector3 Direction;
     private MovementBehaviour MB;
-    private DestroyDisableObjects DD;
 
     private void Awake()
     {
-        DD = GetComponent<DestroyDisableObjects>();
         MB = GetComponent<MovementBehaviour>();
         MB.Init(velocity);
         _time = timeToExplode;
@@ -28,16 +26,17 @@ public class GranadeBehaviour : MonoBehaviour
         else
         {
             _time = timeToExplode;
-            DD.DisableObject();
+            gameObject.SetActive(false);
             ExplodeGranade();
         }
     }
 
     public void ExplodeGranade()
     {
-        GameObject shot = PoolingManager.Instance.GetPooledObject("GranadeExplosion");
+        GameObject explosion = PoolingManager.Instance.GetPooledObject("GranadeExplosion");
 
-        shot.transform.SetPositionAndRotation(transform.position, transform.rotation);
+        explosion.transform.SetPositionAndRotation(transform.position, transform.rotation);
+        explosion.GetComponent<ExplosionBehaviour>().CheckExploded();
         AudioManager.instance.PlaySound("GranadeExplosion");
     }
 

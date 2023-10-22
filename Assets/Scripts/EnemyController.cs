@@ -1,14 +1,13 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
-    public Transform ShootingPivot;
-    public float shootingRotationSpeed;
-    public float Velocity;
-    private Transform Player;
-    private Vector3 Direction;
+    [SerializeField] private Transform shootingPivot;
+    [SerializeField] private float shootingRotationSpeed;
+    [SerializeField] private float velocity;
+
+    private Transform player;
+    private Vector3 direction;
     private SpriteRenderer SR;
     private AnimationController AC;
     private MovementBehaviour MB;
@@ -18,73 +17,45 @@ public class EnemyController : MonoBehaviour
     {
         SR = GetComponent<SpriteRenderer>();
         AC = GetComponent<AnimationController>();
-        MB = GetComponent<MovementBehaviour>();
         SB = GetComponent<ShootingBehaviour>();
-        Player = GameObject.Find("Player").transform;
+        MB = GetComponent<MovementBehaviour>();
+        MB.Init(velocity);
+        player = GameObject.Find("Player").transform;
     }
 
     private void FixedUpdate()
     {
-        MB.MoveRB(Velocity, Direction);
+        MB.MoveRB(direction);
     }
     private void Update()
     {
+        direction = (player.position - transform.position).normalized;
+
+        AC.ChangeWalkingAnimation(direction);
+        FlipEnemyImg();
+        
+        ChangeShootingDir();
         SB.ShootBullet("EnemyBullet");
+    }
 
-        Direction = (Player.position - transform.position).normalized;
+    private void ChangeShootingDir()
+    {
+        Vector3 shootingDir = SB.shootingPoint.transform.position - shootingPivot.position;
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg + 90;
 
-        AC.ChangeWalkingAnimation(Direction);
+        if (Vector3.Dot(shootingDir, direction) < 0.9f)
+        {
+            shootingPivot.rotation = Quaternion.Lerp(shootingPivot.rotation, Quaternion.Euler(0, 0, angle), Time.deltaTime * shootingRotationSpeed);
+        }
+        else
+        {
+            shootingPivot.rotation = Quaternion.Euler(0, 0, angle);
+        }
+    }
 
-        float hor = Direction.x;
-        float ver = Direction.y;
-
-        //Movement
-
-        if (hor >= 0.5f && hor <= 1 && ver >= 0.5f && ver <= 1f) //up-right
-        {
-            SR.flipX = false;
-            ShootingPivot.rotation = Quaternion.Lerp(ShootingPivot.rotation, Quaternion.Euler(0, 0, 135), Time.deltaTime * shootingRotationSpeed);
-        }
-        else if (hor >= 0.5f && hor <= 1 && ver <= -0.5f && ver >= -1) //down-Right
-        {
-            SR.flipX = false;
-            ShootingPivot.rotation = Quaternion.Lerp(ShootingPivot.rotation, Quaternion.Euler(0, 0, 45), Time.deltaTime * shootingRotationSpeed);
-        }
-        else if (hor <= -0.5f && hor >= -1 && ver >= 0.5f && ver <= 1) //up-left
-        {
-            SR.flipX = true;
-            ShootingPivot.rotation = Quaternion.Lerp(ShootingPivot.rotation, Quaternion.Euler(0, 0, -135), Time.deltaTime * shootingRotationSpeed);
-        }
-        else if (hor <= -0.5f && hor >= -1 && ver <= -0.5f && ver >= -1) //down-Left
-        {
-            SR.flipX = true;
-            ShootingPivot.rotation = Quaternion.Lerp(ShootingPivot.rotation, Quaternion.Euler(0, 0, -45), Time.deltaTime * shootingRotationSpeed);
-        }
-        else if (hor >= 0.5f && ver >= -0.5f && ver <= 0.5f) //right
-        {
-            SR.flipX = false;
-            ShootingPivot.rotation = Quaternion.Lerp(ShootingPivot.rotation, Quaternion.Euler(0, 0, 90), Time.deltaTime * shootingRotationSpeed);
-        }
-        else if (hor <= -0.5f && ver >= -0.5f && ver <= 0.5f) //left
-        {
-            SR.flipX = true;
-            ShootingPivot.rotation = Quaternion.Lerp(ShootingPivot.rotation, Quaternion.Euler(0, 0, -90), Time.deltaTime * shootingRotationSpeed);
-        }
-        else if (ver >= 0.5f && hor >= -0.5f && hor <= 0.5f) //up
-        {
-            SR.flipX = false;
-            ShootingPivot.rotation = Quaternion.Lerp(ShootingPivot.rotation, Quaternion.Euler(0, 0, 180), Time.deltaTime * shootingRotationSpeed);
-        }
-        else if (ver <= -0.5f && hor >= -0.5f && hor <= 0.5f) //down
-        {
-            SR.flipX = false;
-            ShootingPivot.rotation = Quaternion.Lerp(ShootingPivot.rotation, Quaternion.Euler(0, 0, 0), Time.deltaTime * shootingRotationSpeed);
-        }
-        else //idle
-        {
-            ShootingPivot.rotation = Quaternion.Lerp(ShootingPivot.rotation, Quaternion.Euler(0, 0, 0), Time.deltaTime * shootingRotationSpeed);
-            SR.flipX = false;
-        }
+    private void FlipEnemyImg()
+    {
+        SR.flipX = direction.x < 0;
     }
 
     private void OnBecameInvisible()

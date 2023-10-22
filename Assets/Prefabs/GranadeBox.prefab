@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 2333549105892388480}
   - component: {fileID: 2333549105892388482}
   - component: {fileID: 2333549105892388481}
-  - component: {fileID: 7739252038018872749}
   m_Layer: 15
   m_Name: GranadeBox
   m_TagString: Untagged
@@ -124,16 +123,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 152aeb157ee77a64aaf6dbdeeb04e75b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GranadeAmountToGive: 1
---- !u!114 &7739252038018872749
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2333549105892388486}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe6e6d1fcd593784ab2ed6d45de9817b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  granadeAmountToGive: 1

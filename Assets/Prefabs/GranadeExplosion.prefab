@@ -12,8 +12,9 @@ GameObject:
   - component: {fileID: 8925443908047956747}
   - component: {fileID: 5754254932127334170}
   - component: {fileID: 1119459072325571952}
-  - component: {fileID: 7197688281204098806}
   - component: {fileID: 1499501023610160652}
+  - component: {fileID: 6079010464173443660}
+  - component: {fileID: 8296249041095911340}
   m_Layer: 13
   m_Name: GranadeExplosion
   m_TagString: Untagged
@@ -118,19 +119,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89583c773f58c4645b2f344dd8bf9e03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Damage: 100
---- !u!114 &7197688281204098806
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6854791471757803285}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe6e6d1fcd593784ab2ed6d45de9817b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  damage: 100
 --- !u!61 &1499501023610160652
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -157,3 +146,32 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.15, y: 0.14}
   m_EdgeRadius: 0
+--- !u!114 &6079010464173443660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6854791471757803285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35eb836d8cf634d48929d928e0b2a558, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _anim: {fileID: 5754254932127334170}
+  OnAnimationFinished:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &8296249041095911340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6854791471757803285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ffd06192bc9d314abbeb49079f90a69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosionAnimClip: {fileID: 7400000, guid: 9914607cfa8311445a7a4ba6f621230f, type: 2}

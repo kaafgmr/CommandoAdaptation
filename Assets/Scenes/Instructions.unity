@@ -266,7 +266,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 323081976}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -522,7 +522,6 @@ GameObject:
   - component: {fileID: 944059055}
   - component: {fileID: 944059058}
   - component: {fileID: 944059056}
-  - component: {fileID: 944059057}
   - component: {fileID: 944059059}
   m_Layer: 5
   m_Name: ObjectiveButton
@@ -596,18 +595,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &944059057
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 944059054}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4fc88a78c7fa3aa408539d0ec882d7e2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!222 &944059058
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -633,26 +620,26 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 944059057}
-          m_TargetAssemblyTypeName: ImageOnHover, Assembly-CSharp
-          m_MethodName: OnHoverEnter
-          m_Mode: 1
+        - m_Target: {fileID: 2093398654}
+          m_TargetAssemblyTypeName: UnityEngine.Renderer, UnityEngine
+          m_MethodName: set_enabled
+          m_Mode: 6
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
-            m_BoolArgument: 0
+            m_BoolArgument: 1
           m_CallState: 2
   - eventID: 1
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 944059057}
-          m_TargetAssemblyTypeName: ImageOnHover, Assembly-CSharp
-          m_MethodName: OnHoverExit
-          m_Mode: 1
+        - m_Target: {fileID: 2093398654}
+          m_TargetAssemblyTypeName: UnityEngine.Renderer, UnityEngine
+          m_MethodName: set_enabled
+          m_Mode: 6
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -672,7 +659,6 @@ GameObject:
   - component: {fileID: 985493676}
   - component: {fileID: 985493679}
   - component: {fileID: 985493677}
-  - component: {fileID: 985493680}
   - component: {fileID: 985493678}
   m_Layer: 5
   m_Name: BackToMenuButton
@@ -748,14 +734,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1058464143}
         m_TargetAssemblyTypeName: MenuControl, Assembly-CSharp
-        m_MethodName: MainMenu
-        m_Mode: 1
+        m_MethodName: ChangeSceneTo
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: MainMenu
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &985493678
@@ -775,26 +761,26 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 985493680}
-          m_TargetAssemblyTypeName: ImageOnHover, Assembly-CSharp
-          m_MethodName: OnHoverEnter
-          m_Mode: 1
+        - m_Target: {fileID: 2102413220}
+          m_TargetAssemblyTypeName: UnityEngine.Renderer, UnityEngine
+          m_MethodName: set_enabled
+          m_Mode: 6
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
-            m_BoolArgument: 0
+            m_BoolArgument: 1
           m_CallState: 2
   - eventID: 1
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 985493680}
-          m_TargetAssemblyTypeName: ImageOnHover, Assembly-CSharp
-          m_MethodName: OnHoverExit
-          m_Mode: 1
+        - m_Target: {fileID: 2102413220}
+          m_TargetAssemblyTypeName: UnityEngine.Renderer, UnityEngine
+          m_MethodName: set_enabled
+          m_Mode: 6
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -811,18 +797,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 985493675}
   m_CullTransparentMesh: 1
---- !u!114 &985493680
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 985493675}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4fc88a78c7fa3aa408539d0ec882d7e2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1058464138
 GameObject:
   m_ObjectHideFlags: 0
@@ -1261,7 +1235,6 @@ GameObject:
   - component: {fileID: 2024130629}
   - component: {fileID: 2024130632}
   - component: {fileID: 2024130630}
-  - component: {fileID: 2024130631}
   - component: {fileID: 2024130633}
   m_Layer: 5
   m_Name: ControlsButton
@@ -1335,18 +1308,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &2024130631
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2024130628}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4fc88a78c7fa3aa408539d0ec882d7e2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!222 &2024130632
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1372,26 +1333,26 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 2024130631}
-          m_TargetAssemblyTypeName: ImageOnHover, Assembly-CSharp
-          m_MethodName: OnHoverEnter
-          m_Mode: 1
+        - m_Target: {fileID: 323081978}
+          m_TargetAssemblyTypeName: UnityEngine.Renderer, UnityEngine
+          m_MethodName: set_enabled
+          m_Mode: 6
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
-            m_BoolArgument: 0
+            m_BoolArgument: 1
           m_CallState: 2
   - eventID: 1
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 2024130631}
-          m_TargetAssemblyTypeName: ImageOnHover, Assembly-CSharp
-          m_MethodName: OnHoverExit
-          m_Mode: 1
+        - m_Target: {fileID: 323081978}
+          m_TargetAssemblyTypeName: UnityEngine.Renderer, UnityEngine
+          m_MethodName: set_enabled
+          m_Mode: 6
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1438,7 +1399,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2093398652}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -1521,7 +1482,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2102413218}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1

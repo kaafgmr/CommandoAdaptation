@@ -7,12 +7,10 @@ public class BulletBehaviour : MonoBehaviour
     [SerializeField] private AnimationClip getHurtAnimClip;
 
     private MovementBehaviour MB;
-    private DestroyDisableObjects Dest;
     private Vector3 Direction;
 
     private void Awake()
     {
-        Dest = GetComponent<DestroyDisableObjects>();
         MB = GetComponent<MovementBehaviour>();
         MB.Init(velocity);  
     }
@@ -44,19 +42,20 @@ public class BulletBehaviour : MonoBehaviour
     }
     public void ExplodeShot()
     {
-        GameObject shot = PoolingManager.Instance.GetPooledObject("BulletExplosion");
+        GameObject explosion = PoolingManager.Instance.GetPooledObject("BulletExplosion");
 
-        shot.transform.SetPositionAndRotation(transform.position, transform.rotation);
+        explosion.transform.SetPositionAndRotation(transform.position, transform.rotation);
+        explosion.GetComponent<ExplosionBehaviour>().CheckExploded();
         AudioManager.instance.PlaySound("BulletHit");
     }
 
     private void DestroyBullet()
     {
         ExplodeShot();
-        Dest.DisableObject();
+        gameObject.SetActive(false);
     }
 
-    public void GetDirection(Vector3 Dir)
+    public void SetDirection(Vector3 Dir)
     {
         Direction = Dir;
     }

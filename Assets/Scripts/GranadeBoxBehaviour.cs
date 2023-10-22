@@ -1,15 +1,17 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class GranadeBoxBehaviour : MonoBehaviour
 {
-    public int GranadeAmountToGive; 
+    public int granadeAmountToGive = 1;
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        int NewAmount = collision.GetComponent<ShootingBehaviour>().granadeAmount += GranadeAmountToGive;
-        collision.GetComponent<ShootingBehaviour>().UpdateGranadeAmount(NewAmount);
-        GetComponent<DestroyDisableObjects>().DestroyObject();
+        if (collision.TryGetComponent(out ShootingBehaviour SB))
+        {
+            int newAmount = SB.granadeAmount += granadeAmountToGive;
+            SB.UpdateGranadeAmount(newAmount);
+        }
+
+        Destroy(gameObject);
         AudioManager.instance.PlaySound("PickUp");
     }
 }

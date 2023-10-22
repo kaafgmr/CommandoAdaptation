@@ -2,30 +2,11 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class MenuControl : MonoBehaviour
 {
-    public void PlayGame()
+    public void ChangeSceneTo(string name)
     {
-        SceneManager.LoadScene("Game");
+        SceneManager.LoadScene(name);
     }
 
-    public void Instructions()
-    {
-        SceneManager.LoadScene("Instructions");
-    }
-
-    public void MainMenu()
-    {
-        SceneManager.LoadScene("MainMenu");
-    }
-
-    public void GameOver()
-    {
-        SceneManager.LoadScene("GameOver");
-    }
-
-    public void FinishGame()
-    {
-        SceneManager.LoadScene("FinishGame");
-    }
     public void Exit()
     {
         #if UNITY_EDITOR

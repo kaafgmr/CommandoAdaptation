@@ -49,14 +49,13 @@ GameObject:
   - component: {fileID: 224487846343576342}
   - component: {fileID: 224487846343576341}
   - component: {fileID: 224487846343576340}
-  - component: {fileID: 224487846343576339}
   m_Layer: 7
   m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &224487846343576338
 Transform:
   m_ObjectHideFlags: 0
@@ -192,9 +191,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25ac0b1a99779bb4d9788b2d9ae7bbca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ShootingPivot: {fileID: 224487845686225769}
+  shootingPivot: {fileID: 224487845686225769}
   shootingRotationSpeed: 5
-  Velocity: 2
+  velocity: 3
 --- !u!114 &224487846343576343
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -229,10 +228,10 @@ MonoBehaviour:
   OnDie:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 224487846343576339}
-        m_TargetAssemblyTypeName: DestroyDisableObjects, Assembly-CSharp
-        m_MethodName: DisableObject
-        m_Mode: 1
+      - m_Target: {fileID: 224487846343576366}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -278,18 +277,6 @@ MonoBehaviour:
   OnAnimationFinished:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &224487846343576339
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 224487846343576366}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe6e6d1fcd593784ab2ed6d45de9817b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &224487846711909078
 GameObject:
   m_ObjectHideFlags: 0

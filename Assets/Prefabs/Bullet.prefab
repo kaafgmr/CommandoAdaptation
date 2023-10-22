@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 7981992669689837474}
   - component: {fileID: 1908127817}
   - component: {fileID: 1908127818}
-  - component: {fileID: -2872697457599177197}
   - component: {fileID: 4681091832464224973}
   - component: {fileID: 3449287953677540203}
   m_Layer: 8
@@ -115,18 +114,6 @@ MonoBehaviour:
   velocity: 10
   damage: 1
   getHurtAnimClip: {fileID: 7400000, guid: 13f6f3cb41de0f1498a7039111281a9b, type: 2}
---- !u!114 &-2872697457599177197
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2337865803786595267}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe6e6d1fcd593784ab2ed6d45de9817b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!58 &4681091832464224973
 CircleCollider2D:
   m_ObjectHideFlags: 0

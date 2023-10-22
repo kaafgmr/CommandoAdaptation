@@ -1796,14 +1796,14 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 703662221}
         m_TargetAssemblyTypeName: MenuControl, Assembly-CSharp
-        m_MethodName: FinishGame
-        m_Mode: 1
+        m_MethodName: ChangeSceneTo
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: FinishGame
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!1001 &490068011
@@ -8497,7 +8497,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocity: 5
-  shootingRotationSpeed: 5
+  shootingRotationSpeed: 6
   ShootingPivot: {fileID: 1759767469978564960}
   throwGranadeAnim: {fileID: 7400000, guid: 3e428c867ba3f884eb954264e6ef2622, type: 2}
   movementStopped: 0
@@ -8573,14 +8573,14 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 703662221}
         m_TargetAssemblyTypeName: MenuControl, Assembly-CSharp
-        m_MethodName: GameOver
-        m_Mode: 1
+        m_MethodName: ChangeSceneTo
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: GameOver
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &262741661572543711
@@ -8627,7 +8627,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  granadeAmount: 999
+  granadeAmount: 5
 --- !u!1 &669194349091263064
 GameObject:
   m_ObjectHideFlags: 0
@@ -9340,7 +9340,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35eb836d8cf634d48929d928e0b2a558, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _anim: {fileID: 0}
+  _anim: {fileID: 2280158154613095601}
   OnAnimationFinished:
     m_PersistentCalls:
       m_Calls: []

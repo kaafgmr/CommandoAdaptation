@@ -12,10 +12,8 @@ GameObject:
   - component: {fileID: 5366082820522033342}
   - component: {fileID: 2647443609406869333}
   - component: {fileID: 2647443609406869334}
-  - component: {fileID: 8980101850813081871}
   - component: {fileID: 7226887446211560913}
   - component: {fileID: 820727093923114103}
-  - component: {fileID: 1646659312148712164}
   m_Layer: 9
   m_Name: EnemyBullet
   m_TagString: Untagged
@@ -116,18 +114,6 @@ MonoBehaviour:
   velocity: 10
   damage: 1
   getHurtAnimClip: {fileID: 7400000, guid: 13f6f3cb41de0f1498a7039111281a9b, type: 2}
---- !u!114 &8980101850813081871
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 345756138179075295}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe6e6d1fcd593784ab2ed6d45de9817b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!58 &7226887446211560913
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -165,24 +151,3 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &1646659312148712164
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 345756138179075295}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 993ac0cdee9635a48a3f39e980bad669, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shootingPoint: {fileID: 0}
-  fireRate: 0
-  UpdateGranadeValue:
-    m_PersistentCalls:
-      m_Calls: []
-  SetGranadeValue:
-    m_PersistentCalls:
-      m_Calls: []
-  granadeAmount: 0

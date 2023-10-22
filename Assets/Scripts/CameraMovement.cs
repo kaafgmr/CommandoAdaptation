@@ -6,6 +6,11 @@ public class CameraMovement : MonoBehaviour
     public float smoothValue;
     public static bool OnFinalPoint = false;
 
+    private void Start()
+    {
+        OnFinalPoint = false;
+    }
+
     private void FixedUpdate()
     {
         MoveCamera();

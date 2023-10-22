@@ -1,16 +1,14 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class GranadeExplosion : MonoBehaviour
 {
-    public float Damage;
+    [SerializeField] private float damage = 100;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.TryGetComponent<HealthBehaviour>(out HealthBehaviour Object) && collision.TryGetComponent<EnemyController>(out EnemyController e))
+        if (collision.TryGetComponent(out HealthBehaviour HB) && collision.TryGetComponent(out EnemyController _))
         {
-            Object.GetHurt(Damage);
+            HB.GetHurt(damage);
         }
     }
 }

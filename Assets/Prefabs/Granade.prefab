@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 8122780762065713006}
   - component: {fileID: 5567428070827884916}
   - component: {fileID: 7905549483469318061}
-  - component: {fileID: -6493269190316900381}
   - component: {fileID: -1792376408720325726}
   m_Layer: 13
   m_Name: Granade
@@ -116,18 +115,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b05d3e05b32a8754fa6a73e733ed0ff6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &-6493269190316900381
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5145352843813883960}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe6e6d1fcd593784ab2ed6d45de9817b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &-1792376408720325726

@@ -49,7 +49,7 @@ public class PlayerController : MonoBehaviour
 
         if(!movementStopped)
         {
-            UpdateMovement(direction);
+            UpdateMovement();
         }
     }
 
@@ -72,9 +72,9 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void UpdateMovement(Vector2 dir)
+    private void UpdateMovement()
     {
-        if (dir.x != 0 || dir.y != 0)
+        if (direction.x != 0 || direction.y != 0)
         {
             AC.ChangeWalkingAnimation(lastDir);
             lastDir = direction;
@@ -85,12 +85,12 @@ public class PlayerController : MonoBehaviour
             AC.ChangeAnimSpeed(0f);
         }
 
-        UpdatePlayerImg(lastDir);
+        UpdatePlayerImg();
     }
 
-    private void UpdatePlayerImg(Vector2 dir)
+    private void UpdatePlayerImg()
     {
-         SR.flipX = dir.x < 0;
+         SR.flipX = lastDir.x < 0;
     }
 
     private void ChangeShootingDir()
@@ -110,9 +110,6 @@ public class PlayerController : MonoBehaviour
 
     private void OnAnimFinishedUpdate(string animName)
     {
-        movementStopped = false;
-        AC.ChangeAnimSpeed(0f);
-
         if (animName == "ThrowGranade")
         {
             OnThrowGranadeAnimFinished();
@@ -120,8 +117,11 @@ public class PlayerController : MonoBehaviour
         else if (animName == "DrownAnim")
         {
             respawn.RespawnObject();
-            AC.ChangeAnimSpeed(1f);
         }
+
+        movementStopped = false;
+        AC.ChangeAnimSpeed(0f);
+        AC.ChangeWalkingAnimation(lastDir);
     }
 
     private void ThrowGranadeUpdate()
@@ -134,6 +134,7 @@ public class PlayerController : MonoBehaviour
     {
         throwingGranade = false;
         AC.ThrowGranadeAnim(0);
+        ShootingPivot.rotation = Quaternion.Euler(Vector3.zero);
         SB.ShootGranade();
     }
 }

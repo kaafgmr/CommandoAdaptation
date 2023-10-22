@@ -21,14 +21,13 @@ public class ShootingBehaviour : MonoBehaviour
         _time += Time.deltaTime;
 
         if (_time < fireRate) return;
-        
         _time = 0;
 
         GameObject shot = PoolingManager.Instance.GetPooledObject(ShotingType);
 
         shot.transform.SetPositionAndRotation(shootingPoint.position, shootingPoint.rotation);
         Vector3 BulletDir = shootingPoint.position - transform.position;
-        shot.GetComponent<BulletBehaviour>().GetDirection(BulletDir);
+        shot.GetComponent<BulletBehaviour>().SetDirection(BulletDir);
         AudioManager.instance.PlaySound("ShootBullet");
     }
 
