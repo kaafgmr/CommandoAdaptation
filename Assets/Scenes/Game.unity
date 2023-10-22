@@ -5650,8 +5650,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1449243745}
-  - component: {fileID: 1449243747}
   - component: {fileID: 1449243746}
+  - component: {fileID: 1449243747}
   m_Layer: 5
   m_Name: Timer
   m_TagString: Untagged
@@ -5692,21 +5692,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9317afd66649f3d438fd43e59923aeb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TimerValue: 120
-  MinimunValue: 0
-  TimeIsUp:
+  timerValue: 120
+  minimunValue: 0
+  TimeChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 703662221}
-        m_TargetAssemblyTypeName: MenuControl, Assembly-CSharp
-        m_MethodName: MainMenu
-        m_Mode: 1
+      - m_Target: {fileID: 1449243747}
+        m_TargetAssemblyTypeName: UIValueChanger, Assembly-CSharp
+        m_MethodName: ChangeValueTo
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  TimeIsUp:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 703662221}
+        m_TargetAssemblyTypeName: MenuControl, Assembly-CSharp
+        m_MethodName: ChangeSceneTo
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: GameOver
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1449243747
@@ -5718,9 +5733,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1449243744}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 85aa7e2ba93a59b498d743310fd8245e, type: 3}
+  m_Script: {fileID: 11500000, guid: 38e9879ec9a8d0548aeb8039f61dc580, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  textToChange: {fileID: 1978950108}
 --- !u!1001 &1458943070
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6433,7 +6449,7 @@ GameObject:
   - component: {fileID: 1698980114}
   - component: {fileID: 1698980116}
   - component: {fileID: 1698980115}
-  - component: {fileID: 1698980117}
+  - component: {fileID: 1698980118}
   m_Layer: 5
   m_Name: HealthText
   m_TagString: Untagged
@@ -6557,7 +6573,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1698980113}
   m_CullTransparentMesh: 1
---- !u!114 &1698980117
+--- !u!114 &1698980118
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6566,9 +6582,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1698980113}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c72d047826c20d469ee3ef5bfaf07f0, type: 3}
+  m_Script: {fileID: 11500000, guid: 38e9879ec9a8d0548aeb8039f61dc580, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  textToChange: {fileID: 1698980115}
 --- !u!4 &1711485314 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2333549105892388483, guid: 886c41f38a335fb44b133e256a3f91e8, type: 3}
@@ -7839,9 +7856,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1969599442}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1b6ead9d6955761418e7e091d7d2e3ca, type: 3}
+  m_Script: {fileID: 11500000, guid: 38e9879ec9a8d0548aeb8039f61dc580, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  textToChange: {fileID: 1969599444}
 --- !u!1 &1978950106
 GameObject:
   m_ObjectHideFlags: 0
@@ -8514,12 +8532,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHealth: 3
+  InitMaxHealth:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1698980118}
+        m_TargetAssemblyTypeName: UIValueChanger, Assembly-CSharp
+        m_MethodName: ChangeValueTo
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnHurt:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1698980117}
-        m_TargetAssemblyTypeName: TextHealthManager, Assembly-CSharp
-        m_MethodName: UpdateLifeValue
+      - m_Target: {fileID: 1698980118}
+        m_TargetAssemblyTypeName: UIValueChanger, Assembly-CSharp
+        m_MethodName: ChangeValueTo
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8539,21 +8572,6 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: GetHurt
-          m_BoolArgument: 0
-        m_CallState: 2
-  SendMaxHealth:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1698980117}
-        m_TargetAssemblyTypeName: TextHealthManager, Assembly-CSharp
-        m_MethodName: UpdateLifeValue
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
   OnDie:
@@ -8601,8 +8619,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1969599446}
-        m_TargetAssemblyTypeName: TextGranadeController, Assembly-CSharp
-        m_MethodName: UpdateGranadeText
+        m_TargetAssemblyTypeName: UIValueChanger, Assembly-CSharp
+        m_MethodName: ChangeValueTo
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8616,8 +8634,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1969599446}
-        m_TargetAssemblyTypeName: TextGranadeController, Assembly-CSharp
-        m_MethodName: UpdateGranadeText
+        m_TargetAssemblyTypeName: UIValueChanger, Assembly-CSharp
+        m_MethodName: ChangeValueTo
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8627,7 +8645,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  granadeAmount: 5
+  granadeAmount: 3
 --- !u!1 &669194349091263064
 GameObject:
   m_ObjectHideFlags: 0

@@ -2,17 +2,35 @@ using UnityEngine;
 using UnityEngine.Events;
 public class TimerManager : MonoBehaviour
 {
-    public float TimerValue;
-    public int MinimunValue;
-    private int TimerReturnValue;
+    [SerializeField] private float startValue = 120;
+    [SerializeField] private int minimunValue = 0;
 
+    private float timerValue;
+    private int timerReturnValue;
+    private int lastValue;
+
+    public UnityEvent<int> TimeChanged;
     public UnityEvent TimeIsUp;
+
+    private void Start()
+    {
+        timerValue = startValue;
+    }
+
     private void Update()
     {
-        TimerValue -= Time.deltaTime;
-        TimerReturnValue = Mathf.RoundToInt(TimerValue);
+        lastValue = timerReturnValue;
+
+        timerValue -= Time.deltaTime;
+        timerReturnValue = Mathf.RoundToInt(timerValue);
         
-        if (TimerReturnValue <= MinimunValue)
+        if (timerReturnValue != lastValue)
+        {
+            lastValue = timerReturnValue;
+            TimeChanged.Invoke(timerReturnValue);
+        }
+
+        if (timerReturnValue <= minimunValue)
         {
             TimeIsUp.Invoke();
         }
@@ -20,6 +38,6 @@ public class TimerManager : MonoBehaviour
 
     public int ReturnTime()
     {
-        return TimerReturnValue;
+        return timerReturnValue;
     }
 }

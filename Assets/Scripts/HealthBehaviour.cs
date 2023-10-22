@@ -6,14 +6,14 @@ public class HealthBehaviour : MonoBehaviour
     private float Health;
     public float MaxHealth;
 
+    public UnityEvent<float> InitMaxHealth;
     public UnityEvent<float> OnHurt;
-    public UnityEvent<float> SendMaxHealth;
     public UnityEvent OnDie;
 
     private void Awake()
     {
         Health = MaxHealth;
-        SendMaxHealth.Invoke(Health);
+        InitMaxHealth.Invoke(Health);
     }
 
     public void GetHurt(float Damage)
