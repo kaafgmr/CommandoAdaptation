@@ -1,10 +1,12 @@
 using UnityEngine;
-
-[System.Serializable]
+using UnityEngine.Audio;
+using System;
+[Serializable]
 public class Sound
 {
 	public string name;
 	public AudioClip clip;
+	public AudioMixerGroup Mixer;
 
 	[Range(0f, 1f)]
 	public float volume = 0.7f;
@@ -20,6 +22,7 @@ public class Sound
 		source = _source;
 		source.clip = clip;
 		source.loop = loop;
+		source.outputAudioMixerGroup = Mixer;
 	}
 
 	public void Play()
@@ -33,15 +36,13 @@ public class Sound
 	{
 		source.Stop();
 	}
-
 }
 
 public class AudioManager : MonoBehaviour
 {
 	public static AudioManager instance;
 
-	[SerializeField]
-	Sound[] sounds;
+	public Sound[] sounds;
 
 	void Awake()
 	{
@@ -57,18 +58,19 @@ public class AudioManager : MonoBehaviour
 			instance = this;
 			DontDestroyOnLoad(this);
 		}
+	
+		InitSounds();
 	}
 
-	void Start()
+	private void InitSounds()
 	{
-		for (int i = 0; i < sounds.Length; i++)
-		{
-			GameObject _go = new GameObject("Sound_" + i + "_" + sounds[i].name);
-			_go.transform.SetParent(this.transform);
-			sounds[i].SetSource(_go.AddComponent<AudioSource>());
-		}
-		//PlaySound("Music");
-	}
+        for (int i = 0; i < sounds.Length; i++)
+        {
+            GameObject _go = new GameObject("Sound_" + i + "_" + sounds[i].name);
+            _go.transform.SetParent(this.transform);
+            sounds[i].SetSource(_go.AddComponent<AudioSource>());
+        }
+    }
 
 	public void PlaySound(string _name)
 	{
@@ -91,6 +93,14 @@ public class AudioManager : MonoBehaviour
 				sounds[i].Stop();
 				return;
 			}
+		}
+	}
+
+	public void StopAllSounds()
+	{
+		for(int i = 0; i < sounds.Length; i++)
+		{
+			sounds[i].Stop();
 		}
 	}
 }
