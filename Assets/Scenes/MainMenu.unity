@@ -998,6 +998,7 @@ GameObject:
   - component: {fileID: 1054559112}
   - component: {fileID: 1054559113}
   - component: {fileID: 1054559114}
+  - component: {fileID: 1054559115}
   m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
@@ -1132,6 +1133,20 @@ MonoBehaviour:
     AudioSlider: {fileID: 0}
   - AudioName: SoundFXVolume
     AudioSlider: {fileID: 0}
+--- !u!114 &1054559115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1054559107}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a6ad7d4af5387147969dae59c8763bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectsToDesappearList:
+  - {fileID: 534388586}
 --- !u!1 &1139519116
 GameObject:
   m_ObjectHideFlags: 0

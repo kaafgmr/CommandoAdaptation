@@ -353,6 +353,7 @@
 "Assets/Scripts/ShootingBehaviour.cs"
 "Assets/Scripts/TimerManager.cs"
 "Assets/Scripts/UIValueChanger.cs"
+"Assets/Scripts/WebVerisonFixes.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/Benchmark01.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/Benchmark01_UGUI.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/Benchmark02.cs"
